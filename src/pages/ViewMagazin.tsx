@@ -58,7 +58,7 @@ function ViewMagazin({history}) {
                 <h3>
                   Opened in : <IonNote>{formatDate(magazin.date)}</IonNote>
                 </h3>
-                <ion-toggle slot='start' checked={magazin.hasDelivery.toString()} disabled="true">Derivers at home</ion-toggle>
+                <ion-toggle slot='start' checked={magazin.hasDelivery.toString()} disabled="true">Delivers at home</ion-toggle>
               </IonLabel>
             </IonItem>
 
