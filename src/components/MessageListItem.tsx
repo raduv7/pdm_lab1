@@ -27,7 +27,7 @@ const MessageListItem: React.FC<MessageListItemProps> = ({ magazin }) => {
             <IonNote>{formatDate(magazin.date)}</IonNote>
           </span>
         </h2>
-        <ion-toggle slot='start' checked={magazin.hasDelivery.toString()} disabled="true">Derivers at home</ion-toggle>
+        <ion-toggle slot='start' checked={magazin.hasDelivery.toString()} disabled="true">Delivers at home</ion-toggle>
       </IonLabel>
     </IonItem>
   );

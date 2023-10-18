@@ -19,6 +19,7 @@ import './ViewMessage.css';
 import MagazinForm from "../components/MagazinForm";
 
 
+// @ts-ignore
 function ViewMagazin({history}) {
   const [magazin, setMagazin] = useState<Magazin>();
   const [showEdit, setShowEdit] = useState(false);
@@ -35,6 +36,7 @@ function ViewMagazin({history}) {
     });
   });
 
+  // @ts-ignore
   return (
     <IonPage id="view-message-page">
       <IonHeader translucent>
@@ -54,21 +56,25 @@ function ViewMagazin({history}) {
                   {magazin.name}
                 </h2>
                 <h3>
-                  Deschis in data de: <IonNote>{formatDate(magazin.date)}</IonNote>
+                  Opened in : <IonNote>{formatDate(magazin.date)}</IonNote>
                 </h3>
                 <ion-toggle slot='start' checked={magazin.hasDelivery.toString()} disabled="true">Derivers at home</ion-toggle>
               </IonLabel>
             </IonItem>
 
             <div className="ion-padding">
-              <p>
-                Magazinul acesta a fost adaugat de catre unul din utilizatorii aplicatiei. Daca doresti sa adaugi si tu un magazin, te rugam sa ne contactezi la adresa de email: <IonNote> magazin@yahoo.com </IonNote>
-              </p>
+                <p>
+                    Hi shopper!
+                </p>
+              {/*<p>*/}
+              {/*  Magazinul acesta a fost adaugat de catre unul din utilizatorii aplicatiei. Daca doresti sa adaugi si tu un magazin, te rugam sa ne contactezi la adresa de email: <IonNote> magazin@yahoo.com </IonNote>*/}
+              {/*</p>*/}
             </div>
 
             {showEdit ? <>
               <MagazinForm onSave={newMagazin => {
                 console.log(newMagazin);
+                // @ts-ignore
                 magazineApi.updateMagazine(magazin!.id?.toString(), newMagazin).then(() => {
                   history.push('/home');
                   window.location.reload();
@@ -83,7 +89,7 @@ function ViewMagazin({history}) {
 
           </>
         ) : (
-          <div>Magazinul nu a fost gasit</div>
+          <div>Sir, the shop was not found!</div>
         )}
       </IonContent>
     </IonPage>

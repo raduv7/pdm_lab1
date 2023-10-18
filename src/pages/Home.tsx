@@ -68,7 +68,7 @@ const Home: React.FC<RouteComponentProps> = ({history}) => {
     <IonPage id="home-page">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Lista magazine</IonTitle>
+          <IonTitle>Shops list</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -79,7 +79,7 @@ const Home: React.FC<RouteComponentProps> = ({history}) => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">
-              Lista magazine
+              Shops list
             </IonTitle>
           </IonToolbar>
         </IonHeader>
